@@ -16,16 +16,12 @@
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><ion-icon name="home-sharp"></ion-icon>
               </div>
-              <div class="menu-title">Dashboard</div>
+              <div class="menu-title">Main</div>
             </a>
             <!-- anak dashboard -->
             <ul>
-              <li> <a href="index.html">
-                  <ion-icon name="ellipse-outline"></ion-icon>Default
-                </a>
-              </li>
-              <li> <a href="index.html">
-                  <ion-icon name="ellipse-outline"></ion-icon>Default
+              <li> <a href="{{ route('photo.index')}} ">
+                  <ion-icon name="ellipse-outline"></ion-icon>Upload meme(photo)
                 </a>
               </li>
             </ul>
