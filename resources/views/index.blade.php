@@ -1,5 +1,18 @@
-@extends("master-layout.index")
-@section('title') Meme | Index @endsection
+<style>
+    .bg-image {
+        background-image: url('{{ asset('assets/images/meme.png') }}');
+        background-size: 100vh;
+        background-position:center center;
+        background-repeat: no-repeat;
+        height: 75vh;
+    }
+</style>
+@extends('master-layout.index')
+@section('title')
+    Meme | Index
+@endsection
 @section('content')
-	<h1>Hello</h1>
+    <div class="bg-image">
+        <marquee><h1>Welcome</h1></marquee>
+    </div>
 @endsection
