@@ -35,7 +35,7 @@
         </li>
         <li>
             <li> <a href="/about">
-                    <ion-icon name="ellipse-outline"></ion-icon>About US
+                    <ion-icon name="ellipse-outline"></ion-icon>About Us
                 </a>
             </li>
         </li>
