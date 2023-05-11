@@ -1,269 +1,88 @@
-<!--start top header-->
-<header class="top-header">
-    <nav class="navbar navbar-expand gap-3">
-        <div class="mobile-menu-button">
-            <ion-icon name="menu-sharp"></ion-icon>
-        </div>
-        <form class="searchbar">
-            <div class="position-absolute top-50 translate-middle-y search-icon ms-3">
-                <ion-icon name="search-sharp"></ion-icon>
-            </div>
-            <input class="form-control" type="text" placeholder="Search for anything">
-            <div class="position-absolute top-50 translate-middle-y search-close-icon">
-                <ion-icon name="close-sharp"></ion-icon>
-            </div>
-        </form>
-        <div class="top-navbar-right ms-auto">
-
-            <ul class="navbar-nav align-items-center">
-                <li class="nav-item mobile-search-button">
-                    <a class="nav-link" href="javascript:;">
-                        <div class="">
-                            <ion-icon name="search-sharp"></ion-icon>
-                        </div>
+  <!-- header-section start -->
+    <header class="header-section header-menu">
+        <nav class="navbar navbar-expand-lg p-0">
+            <div class="container-fluid">
+                <nav class="navbar w-100 navbar-expand-lg justify-content-betweenm">
+                    <a href="/" class="navbar-brand bg-light px-3 py-1 rounded">
+                        Meme-ku
+                        {{-- <img src="assets/images/logo.png" class="logo" alt="logo"> --}}
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link dark-mode-icon" href="javascript:;">
-                        <div class="mode-icon">
-                            <ion-icon name="moon-sharp"></ion-icon>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item dropdown dropdown-large dropdown-apps">
-                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;"
-                        data-bs-toggle="dropdown">
-                        <div class="">
-                            <ion-icon name="apps-sharp"></ion-icon>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
-                        <div class="row row-cols-3 g-3 p-3">
-                            <div class="col text-center">
-                                <div class="app-box mx-auto bg-gradient-purple text-white">
-                                    <ion-icon name="cart-sharp"></ion-icon>
-                                </div>
-                                <div class="app-title">Orders</div>
-                            </div>
-                            <div class="col text-center">
-                                <div class="app-box mx-auto bg-gradient-info text-white">
-                                    <ion-icon name="people-sharp"></ion-icon>
-                                </div>
-                                <div class="app-title">Teams</div>
-                            </div>
-                            <div class="col text-center">
-                                <div class="app-box mx-auto bg-gradient-success text-white">
-                                    <ion-icon name="shield-checkmark-sharp"></ion-icon>
-                                </div>
-                                <div class="app-title">Tasks</div>
-                            </div>
-                            <div class="col text-center">
-                                <div class="app-box mx-auto bg-gradient-danger text-white">
-                                    <ion-icon name="videocam-sharp"></ion-icon>
-                                </div>
-                                <div class="app-title">Media</div>
-                            </div>
-                            <div class="col text-center">
-                                <div class="app-box mx-auto bg-gradient-warning text-white">
-                                    <ion-icon name="file-tray-sharp"></ion-icon>
-                                </div>
-                                <div class="app-title">Files</div>
-                            </div>
-                            <div class="col text-center">
-                                <div class="app-box mx-auto bg-gradient-branding text-white">
-                                    <ion-icon name="notifications-sharp"></ion-icon>
-                                </div>
-                                <div class="app-title">Alerts</div>
-                            </div>
-                        </div>
+                    <button class="button search-active d-block d-md-none">
+                        <i class="d-center material-symbols-outlined fs-xxl mat-icon"> search </i>
+                    </button>
+                    <div class="search-form">
+                       
                     </div>
-                </li>
-                <li class="nav-item dropdown dropdown-large">
-                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;"
-                        data-bs-toggle="dropdown">
-
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                        <a href="javascript:;">
-                            <div class="msg-header">
-                                <p class="msg-header-title">Notifications</p>
-                                <p class="msg-header-clear ms-auto">Marks all as read</p>
-                            </div>
-                        </a>
-                        <div class="header-notifications-list">
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-primary">
-                                        <ion-icon name="cart-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">New Orders <span class="msg-time float-end">2 min
-                                                ago</span></h6>
-                                        <p class="msg-info">You have recived new orders</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-danger">
-                                        <ion-icon name="person-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">New Customers<span class="msg-time float-end">14 Sec
-                                                ago</span></h6>
-                                        <p class="msg-info">5 new user registered</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-success">
-                                        <ion-icon name="document-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">24 PDF File<span class="msg-time float-end">19 min
-                                                ago</span></h6>
-                                        <p class="msg-info">The pdf files generated</p>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-info">
-                                        <ion-icon name="checkmark-done-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">New Product Approved 
-                                          <span class="msg-time float-end">2 hours ago</span>
-                                        </h6>
-                                        <p class="msg-info">Your new product has approved</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-warning">
-                                        <ion-icon name="send-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">Time Response 
-                                          <span class="msg-time float-end">28 min ago</span>
-                                        </h6>
-                                        <p class="msg-info">5.1 min avarage time response</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-danger">
-                                        <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">New Comments <span class="msg-time float-end">4 hrs
-                                                ago</span></h6>
-                                        <p class="msg-info">New customer comments recived</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-primary">
-                                        <ion-icon name="albums-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">New 24 authors
-                                          <span class="msg-time float-end">1 day ago</span>
-                                        </h6>
-                                        <p class="msg-info">24 new authors joined last week</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-success">
-                                        <ion-icon name="shield-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">Your item is shipped <span class="msg-time float-end">5
-                                                hrs
-                                                ago</span></h6>
-                                        <p class="msg-info">Successfully shipped your item</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="dropdown-item" href="javascript:;">
-                                <div class="d-flex align-items-center">
-                                    <div class="notify text-warning">
-                                        <ion-icon name="cafe-outline"></ion-icon>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="msg-name">Defense Alerts <span class="msg-time float-end">2 weeks
-                                                ago</span></h6>
-                                        <p class="msg-info">45% less alerts last 4 weeks</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <a href="javascript:;">
-                            <div class="text-center msg-footer">View All Notifications</div>
-                        </a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown dropdown-user-setting">
-                    <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="javascript:;"
-                        data-bs-toggle="dropdown">
-                        <div class="user-setting">
-                            <img src="assets/images/avatars/06.png" class="user-img" alt="">
-                        </div>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <div class="d-flex flex-row align-items-center gap-2">
-                                    <img src="assets/images/avatars/06.png" alt="" class="rounded-circle"
-                                        width="54" height="54">
-                                    <div class="">
-                                        <h6 class="mb-0 dropdown-user-name">Akun pengunjung</h6>
-                                        <small class="mb-0 dropdown-user-designation text-secondary">role</small>
-                                    </div>
-                                </div>
-                            </a>
+                    <ul class="navbar-nav feed flex-row gap-xl-20 gap-lg-10 gap-sm-7 gap-1 py-4 py-lg-0 m-lg-auto ms-auto ms-aut align-self-center">
+                       {{--  <li>
+                            <a href="index-2.html" class="nav-icon home active"><i class="mat-icon fs-xxl material-symbols-outlined mat-icon">home</i></a>
                         </li>
                         <li>
-                            <hr class="dropdown-divider">
+                            <a href="#news-feed" class="nav-icon feed"><i class="mat-icon fs-xxl material-symbols-outlined mat-icon">feed</i></a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="pages-user-profile.html">
-                                <div class="d-flex align-items-center">
-                                    <div class="">
-                                        <ion-icon name="person-outline"></ion-icon>
-                                    </div>
-                                    <div class="ms-3"><span>Profile</span></div>
-                                </div>
-                            </a>
+                            <a href="group.html" class="nav-icon"><i class="mat-icon fs-xxl material-symbols-outlined mat-icon">group</i></a>
                         </li>
                         <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li>
-                            <form action="{{ route('logout') }}" method="post">
-                                @csrf
-                                <button type="submit" class="w-100 bg-transparent" style="border:none">
-                                    <a class="dropdown-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="">
-                                                <ion-icon name="log-out-outline"></ion-icon>
-                                            </div>
-                                            <div class="ms-3"><span>Logout</span></div>
-                                        </div>
-                                    </a></button>
-                            </form>
-                        </li>
+                            <a href="videos.html" class="nav-icon"><i class="mat-icon fs-xxl material-symbols-outlined mat-icon">smart_display</i></a>
+                        </li> --}}
                     </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
-<!--end top header-->
+                    {{-- akun --}}
+                    <div class="right-area position-relative d-flex gap-3 gap-xxl-6 align-items-center">
+                        <div class="single-item d-none d-lg-block profile-area position-relative">
+                            <div class="profile-pic d-flex align-items-center">
+                                <span class="avatar cmn-head active-status">
+                                    <img class="avatar-img max-un" src="assets/images/avatar-1.png" alt="avatar">
+                                </span>
+                            </div>
+                            <div class="main-area p-5 profile-content">
+                                <div class="head-area">
+                                    <div class="d-flex gap-3 align-items-center">
+                                        <div class="avatar-item">
+                                            <img class="avatar-img max-un" src="assets/images/avatar-1.png" alt="avatar">
+                                        </div>
+                                        <div class="text-area">
+                                            <h6 class="m-0 mb-1">{{ Auth()->user()->name }}</h6>
+                                            <p class="mdtxt">{{ Auth()->user()->role }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="view-profile my-2">
+                                    <a href="#" class="mdtxt w-100 text-center py-2">View profile</a>
+                                </div>
+                                <ul>
+                                {{--     <li>
+                                        <a href="#" class="mdtxt">
+                                            <i class="material-symbols-outlined mat-icon"> settings </i>
+                                            Settings & Privacy
+                                        </a>
+                                    </li> --}}
+                                    <li>
+                                        <form action="/logout" method="post">
+                                            @csrf
+                                            <button type="submit" style="border:none">
+                                                <a href="#" class="mdtxt">
+                                                    <i class="material-symbols-outlined mat-icon"> power_settings_new </i>
+                                                    Sign Out
+                                                </a>
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                                <div class="switch-wrapper mt-4 d-flex gap-1 align-items-center">
+                                    <i class="mat-icon material-symbols-outlined sun icon"> light_mode </i>
+                                    <label class="switch">
+                                        <input type="checkbox" class="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                    <i class="mat-icon material-symbols-outlined moon icon"> dark_mode </i>
+                                    <span class="mdtxt ms-2">Dark mode</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+    </header>
+    <!-- header-section end -->

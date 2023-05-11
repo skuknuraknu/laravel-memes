@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Photo;
 
 class User extends Authenticatable
 {
@@ -22,4 +23,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function photos(){
+        return $this->hasMany(Photo::class, 'id_post', 'id');
+    }
+    public function comments(){
+        return $this->hasMany(Comment::class, 'id_user', 'id');
+    }
 }

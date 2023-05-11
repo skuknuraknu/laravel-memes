@@ -11,10 +11,12 @@ return new class extends Migration
         Schema::create('photo', function (Blueprint $table) {
             $table->id();
             $table->integer("id_user");
+            $table->string("url")->nullable();
             $table->string("nama_photo");
             $table->string("path_photo");
             $table->text("desc_photo");
             $table->text("tags_photo");
+            $table->integer("is_private");
             $table->timestamps();
         });
     }

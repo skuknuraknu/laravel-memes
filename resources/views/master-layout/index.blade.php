@@ -1,155 +1,223 @@
 <!doctype html>
-<html lang="en" class="semi-dark">
-
+<html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- loader-->
-      <link href="{{ asset('assets/css/pace.min.css')}}" rel="stylesheet" />
-      <script src="{{ asset('assets/js/pace.min.js')}}"></script>
-
-  <!-- loader-->
-  <link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
-  <script src="{{ asset('assets/js/pace.min.js') }}"></script>
-
-  <!--plugins-->
-  <link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
-
-    <!-- CSS Files -->
-    <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/css/bootstrap-extended.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
-    <link href="{{ asset('assets/css/icons.css')}}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
-
-  <!--Theme Styles-->
-  <link href="{{ asset('assets/css/dark-theme.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/css/semi-dark.css') }}" rel="stylesheet" />
-  <link href="{{ asset('assets/css/header-colors.css') }}" rel="stylesheet" />
-
-  <title>@yield('title')</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Circlehub">
+    <meta name="description" content="Circlehub HTML5 Template">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@yield("title")</title>
+    <link rel="shortcut icon" href="{{ asset('assets/images/fav.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
 </head>
 
 <body>
 
+    <!-- start preloader -->
+    <div class="preloader align-items-center justify-content-center">
+        <span class="loader"></span>
+    </div>
+    <!-- end preloader -->
 
-  <!--start wrapper-->
-  <div class="wrapper">
-      @include('master-layout.sidebar')
-      @include('master-layout.header')
-      <div class="page-content-wrapper">
-          <!-- start page content-->
-          <div class="page-content">
-              @yield('content')
-          </div>
-          <!-- end page content-->
-      </div>
+    <!-- Scroll To Top Start-->
+    <button class="scrollToTop d-none d-lg-block"><i class="mat-icon fas fa-angle-double-up"></i></button>
+    <!-- Scroll To Top End -->
+    @include("master-layout.header")
+    @include("master-layout.bottom_menu")
 
+    <!-- Main Content start -->
+    <main class="main-content sidebar-content">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                @include("master-layout.sidebar")
+                @include("master-layout.content")
+                @include("master-layout.rightbar")
+            </div>
+        </div>
+    </main>
+    <!-- Main Content end -->
 
+    <!-- Go Live Popup start -->
+    <div class="go-live-popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="modal cmn-modal fade" id="goLiveMod">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content p-5">
+                                <div class="modal-header justify-content-center">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="material-symbols-outlined mat-icon xxltxt"> close </i>
+                                    </button>
+                                </div>
+                                <div class="top-content pb-5">
+                                    <h5>Go Live</h5>
+                                </div>
+                                <div class="mid-area">
+                                    <div class="d-flex mb-5 gap-3">
+                                        <div class="profile-box">
+                                            <a href="#"><img src="assets/images/add-post-avatar.png" class="max-un" alt="icon"></a>
+                                        </div>
+                                        <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
+                                    </div>
+                                    <div class="file-upload">
+                                        <label>Upload attachment</label>
+                                        <label class="file mt-1">
+                                            <input type="file">
+                                            <span class="file-custom pt-8 pb-8 d-grid text-center">
+                                                <i class="material-symbols-outlined mat-icon"> perm_media </i>
+                                                <span>Drag here or click to upload photo.</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="footer-area pt-5">
+                                    <div class="btn-area d-flex justify-content-end gap-2">
+                                        <button type="button" class="cmn-btn alt" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                        <button class="cmn-btn">Go Live</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Go Live Popup end -->
 
-      <!--Start Back To Top Button-->
-      <a href="javaScript:;" class="back-to-top">
-          <ion-icon name="arrow-up-outline"></ion-icon>
-      </a>
-      <!--End Back To Top Button-->
+    <!-- video popup start -->
+    <div class="go-live-popup video-popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="modal cmn-modal fade" id="photoVideoMod">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content p-5">
+                                <div class="modal-header justify-content-center">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="material-symbols-outlined mat-icon xxltxt"> close </i>
+                                    </button>
+                                </div>
+                                <div class="top-content pb-5">
+                                    <h5>Add post photo/video</h5>
+                                </div>
+                                <div class="mid-area">
+                                    <div class="d-flex mb-5 gap-3">
+                                        <div class="profile-box">
+                                            <a href="#"><img src="assets/images/add-post-avatar.png" class="max-un" alt="icon"></a>
+                                        </div>
+                                        <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
+                                    </div>
+                                    <div class="file-upload">
+                                        <label>Upload attachment</label>
+                                        <label class="file mt-1">
+                                            <input type="file">
+                                            <span class="file-custom pt-8 pb-8 d-grid text-center">
+                                                <i class="material-symbols-outlined mat-icon"> perm_media </i>
+                                                <span>Drag here or click to upload photo.</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="footer-area pt-5">
+                                    <div class="btn-area d-flex justify-content-end gap-2">
+                                        <button type="button" class="cmn-btn alt" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                        <button class="cmn-btn">Post</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- video popup end -->
 
-      <!--start switcher-->
-      <div class="switcher-body">
-          <button class="btn btn-primary btn-switcher shadow-sm" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-              <ion-icon name="color-palette-sharp" class="me-0"></ion-icon>
-          </button>
-          <div class="offcanvas offcanvas-end shadow border-start-0 p-2" data-bs-scroll="true"
-              data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling">
-              <div class="offcanvas-header border-bottom">
-                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Theme Customizer</h5>
-                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
-              </div>
-              <div class="offcanvas-body">
-                  <h6 class="mb-0">Theme Variation</h6>
-                  <hr>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="LightTheme"
-                          value="option1">
-                      <label class="form-check-label" for="LightTheme">Light</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="DarkTheme"
-                          value="option2">
-                      <label class="form-check-label" for="DarkTheme">Dark</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="SemiDark"
-                          value="option3" checked>
-                      <label class="form-check-label" for="SemiDark">Semi Dark</label>
-                  </div>
-                  <hr />
-                  <h6 class="mb-0">Header Colors</h6>
-                  <hr />
-                  <div class="header-colors-indigators">
-                      <div class="row row-cols-auto g-3">
-                          <div class="col">
-                              <div class="indigator headercolor1" id="headercolor1"></div>
-                          </div>
-                          <div class="col">
-                              <div class="indigator headercolor2" id="headercolor2"></div>
-                          </div>
-                          <div class="col">
-                              <div class="indigator headercolor3" id="headercolor3"></div>
-                          </div>
-                          <div class="col">
-                              <div class="indigator headercolor4" id="headercolor4"></div>
-                          </div>
-                          <div class="col">
-                              <div class="indigator headercolor5" id="headercolor5"></div>
-                          </div>
-                          <div class="col">
-                              <div class="indigator headercolor6" id="headercolor6"></div>
-                          </div>
-                          <div class="col">
-                              <div class="indigator headercolor7" id="headercolor7"></div>
-                          </div>
-                          <div class="col">
-                              <div class="indigator headercolor8" id="headercolor8"></div>
-                          </div>
-                      </div>
-                  </div>
+    <!-- Go Live Popup start -->
+    <div class="go-live-popup">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="modal cmn-modal fade" id="activityMod">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content p-5">
+                                <div class="modal-header justify-content-center">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="material-symbols-outlined mat-icon xxltxt"> close </i>
+                                    </button>
+                                </div>
+                                <div class="top-content pb-5">
+                                    <h5>Create post</h5>
+                                </div>
+                                <div class="mid-area">
+                                    <div class="d-flex mb-5 gap-3">
+                                        <div class="profile-box">
+                                            <a href="#"><img src="assets/images/add-post-avatar.png" class="max-un" alt="icon"></a>
+                                        </div>
+                                        <textarea cols="10" rows="2" placeholder="Write something to Lerio.."></textarea>
+                                    </div>
+                                    <div class="file-upload">
+                                        <label>Upload attachment</label>
+                                        <label class="file mt-1">
+                                            <input type="file">
+                                            <span class="file-custom pt-8 pb-8 d-grid text-center">
+                                                <i class="material-symbols-outlined mat-icon"> perm_media </i>
+                                                <span>Drag here or click to upload photo.</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="tooltips-area d-flex mt-3 gap-2">
+                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Fallings/Activity">
+                                            <i class="material-symbols-outlined mat-icon"> mood </i>
+                                        </button>
+                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Video">
+                                            <i class="material-symbols-outlined mat-icon"> movie </i>
+                                        </button>
+                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Maps">
+                                            <i class="material-symbols-outlined mat-icon"> location_on </i>
+                                        </button>
+                                        <button type="button" class="btn d-center" data-bs-toggle="tooltip" data-bs-placement="top" title="Tag">
+                                            <i class="material-symbols-outlined mat-icon"> sell </i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="footer-area d-flex justify-content-between pt-5">
+                                    <div class="left-area">
+                                        <select>
+                                            <option value="1">Public</option>
+                                            <option value="2">Only Me</option>
+                                            <option value="3">Friends</option>
+                                            <option value="4">Custom</option>
+                                        </select>
+                                    </div>
+                                    <div class="btn-area d-flex justify-content-end gap-2">
+                                        <button type="button" class="cmn-btn alt" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                                        <button class="cmn-btn">Post</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Go Live Popup end -->
 
-              </div>
-          </div>
-      </div>
-      <!--end switcher-->
-
-
-      <!--start overlay-->
-      <div class="overlay nav-toggle-icon"></div>
-      <!--end overlay-->
-
-  </div>
-  <!--end wrapper-->
-
-
-
-
-
-    <!-- JS Files-->
-    <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
-    <script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js')}}"></script>
-    <script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js')}}"></script>
+    <script src="{{ asset('assets/js/plugins/jquery.min.js')}}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
-    <script type="module" src="{{ asset('../../../../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.esm.js')}}"></script>
-    <!--plugins-->
-    <script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
-
-    <!-- Main JS-->
+    <script src="{{ asset('assets/js/plugins/slick.js')}}"></script>
+    <script src="{{ asset('assets/js/plugins/jquery.nice-select.min.js')}}"></script>
+    <script src="{{ asset('assets/js/plugins/plyr.js')}}"></script>
+    <!-- <script src="{{ asset('assets/js/plugins/apexcharts.js')}}"></script> -->
+    <script src="{{ asset('assets/js/plugins/wow.min.js')}}"></script>
+    <script src="{{ asset('assets/js/plugins/plugin.js')}}"></script>
     <script src="{{ asset('assets/js/main.js')}}"></script>
-
-
 </body>
 
+
+<!-- Mirrored from pixner.net/circlehub/main/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 May 2023 11:10:24 GMT -->
 </html>

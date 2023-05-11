@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController as Auth;
 use App\Http\Controllers\PhotoController as Photo;
+use App\Http\Controllers\FeedController as Feed;
 
 Route::middleware(["guest"])->group(function(){
     Route::get("/signin", [Auth::class, "signin_index"])->name("signin.index");
@@ -13,11 +14,12 @@ Route::middleware(["guest"])->group(function(){
 
 Route::middleware(["auth"])->group(function(){
     Route::post("/logout", [Auth::class, "logout"])->name("logout");
-    Route::get('/', function () {return view('index');});
+    Route::get("/", [Feed::class, "index"]);
+    Route::post("/feed/komentar", [Feed::class, "commentFeed"]);
     // photo controller
     Route::get("/photo", [Photo::class, "index"])->name("photo.index");
     Route::post("/photo", [Photo::class, "store"])->name("photo.upload");
-    Route::get("/photo/meme_kamu", [Photo::class, "meme_kamu"])->name("meme_kamu.index");
-    Route::get("/photo/meme_kamu/edit/{id}", [Photo::class, "edit_meme_kamu"])->name("meme_kamu.edit");
-    Route::post("/photo/meme_kamu/edit/{id}", [Photo::class, "process_edit_meme_kamu"])->name("meme_kamu.edit_process");
+    Route::post("/photo/meme_kamu/edit", [Photo::class, "edit"])->name("meme_kamu.edit_process");
+    Route::post("/photo/delete", [Photo::class, "destroy"])->name("photo.hapus");
+    Route::post("/photo/comment", [Photo::class, "comment"])->name("photo.comment");
 });

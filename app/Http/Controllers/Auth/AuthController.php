@@ -28,7 +28,7 @@ class AuthController extends Controller
         if(Auth::attempt(["email" => request()->email, "password" => request()->password])){
             return redirect("/");
         }else{
-            return redirect()->route("signin.index")
+            return redirect()->route("signin.index")->withInput()
                     ->withErrors(['msg' => 'Email atau password salah']);
         }
     }
@@ -43,7 +43,7 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
         if ($validator->fails()) {
-            return redirect()->route("signup.index")
+            return redirect()->route("signin.index")
                     ->withErrors($validator)
                     ->withInput();
         }
