@@ -10,10 +10,10 @@ Route::middleware(["guest"])->group(function(){
     Route::get("/signup", [Auth::class, "signup_index"])->name("signup.index");
     Route::post("/signup", [Auth::class, "signup_process"])->name("signup.process");
 });
+
 Route::middleware(["auth"])->group(function(){
     Route::post("/logout", [Auth::class, "logout"])->name("logout");
     Route::get('/', function () {return view('index');});
-
     // photo controller
     Route::get("/photo", [Photo::class, "index"])->name("photo.index");
     Route::post("/photo", [Photo::class, "store"])->name("photo.upload");
