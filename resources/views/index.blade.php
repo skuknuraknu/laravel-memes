@@ -1,5 +1,16 @@
-@extends("master-layout.index")
-@section('title') Meme | Index @endsection
+<style>
+    .bg-image {
+        background-image: url('{{ asset('assets/images/meme.png') }}');
+        background-size: 100vh;
+        background-position:center center;
+        background-repeat: no-repeat;
+        height: 75vh;
+    }
+</style>
+@extends('master-layout.index')
+@section('title')
+    Meme | Index
+@endsection
 @section('content')
 	<h1>Hello</h1>
 	<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Tambah Data</button>

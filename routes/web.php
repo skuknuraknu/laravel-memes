@@ -19,4 +19,6 @@ Route::middleware(["auth"])->group(function(){
     Route::post("/photo", [Photo::class, "store"])->name("photo.upload");
     Route::post("/photo/update", [Photo::class, "update"])->name("photo.update");
     Route::post("/photo/delete", [Photo::class, "destroy"])->name("photo.delete");
+
+    Route::get('/about', function () {return view('about');});
 });
