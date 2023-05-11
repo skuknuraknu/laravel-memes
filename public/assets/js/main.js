@@ -1,7 +1,5 @@
 $(function() {
 
-
-
   $(function() {
 		$("#menu").metisMenu()
 	})
@@ -30,14 +28,6 @@ $(function() {
 		}))
 	})
 
-
-
-
-
-
-
-
-
   $(".btn-mobile-filter").on("click", function() {
 		$(".filter-sidebar").removeClass("d-none");
 	}),
@@ -45,9 +35,6 @@ $(function() {
     $(".btn-mobile-filter-close").on("click", function() {
 		$(".filter-sidebar").addClass("d-none");
 	}),
-
-
-
 
   $(".mobile-search-button").on("click", function() {
 
@@ -74,11 +61,7 @@ $(function() {
 		})
 	})
 
-
-
-
   $(".dark-mode-icon").on("click", function() {
-
     if($(".mode-icon ion-icon").attr("name") == 'sunny-sharp') {
         $(".mode-icon ion-icon").attr("name", "moon-sharp");
         $("html").attr("class", "light-theme")
@@ -86,7 +69,6 @@ $(function() {
         $(".mode-icon ion-icon").attr("name", "sunny-sharp");
         $("html").attr("class", "dark-theme")
     }
-
   }), 
 
 
@@ -173,21 +155,10 @@ function theme8() {
 
 
 
-
-
-
-
   new PerfectScrollbar(".header-notifications-list")
-
 
     // Tooltops
     $(function () {
       $('[data-bs-toggle="tooltip"]').tooltip();
-    })
-
-
-  
-
-  
-    
+    })    
 });

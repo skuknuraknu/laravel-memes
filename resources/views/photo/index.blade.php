@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @extends("master-layout.index")
 @section('title') Meme | Upload photo @endsection
 @include('photo.css')
