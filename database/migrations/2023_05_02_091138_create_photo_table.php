@@ -13,6 +13,8 @@ return new class extends Migration
             $table->integer("id_user");
             $table->string("nama_photo");
             $table->string("path_photo");
+            $table->text("desc_photo");
+            $table->text("tags_photo");
             $table->timestamps();
         });
     }
