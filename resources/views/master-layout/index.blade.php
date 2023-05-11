@@ -2,9 +2,14 @@
 <html lang="en" class="semi-dark">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- loader-->
+      <link href="{{ asset('assets/css/pace.min.css')}}" rel="stylesheet" />
+      <script src="{{ asset('assets/js/pace.min.js')}}"></script>
 
   <!-- loader-->
   <link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
@@ -15,12 +20,12 @@
   <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
   <link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
 
-  <!-- CSS Files -->
-  <link href="{{ asset('assets/css/bootstrap.mi') }}n.css" rel="stylesheet">
-  <link href="{{ asset('assets/css/bootstrap-extende') }}d.css" rel="stylesheet">
-  <link href="{{ asset('assets/css/styl') }}e.css" rel="stylesheet">
-  <link href="{{ asset('assets/css/icon') }}s.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap-extended.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/icons.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&amp;display=swap" rel="stylesheet">
 
   <!--Theme Styles-->
   <link href="{{ asset('assets/css/dark-theme.css') }}" rel="stylesheet" />
@@ -132,17 +137,17 @@
 
 
 
-  <!-- JS Files-->
-  <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-  <script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
-  <script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
-  <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-  <script type="module" src="{{ asset('../../../../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.esm.js')}}"></script>
-  <!--plugins-->
-  <script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
+    <!-- JS Files-->
+    <script src="{{ asset('assets/js/jquery.min.js')}}"></script>
+    <script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js')}}"></script>
+    <script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js')}}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script type="module" src="{{ asset('../../../../unpkg.com/ionicons%405.5.2/dist/ionicons/ionicons.esm.js')}}"></script>
+    <!--plugins-->
+    <script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js')}}"></script>
 
-  <!-- Main JS-->
-  <script src="{{ asset('assets/js/main.js') }}"></script>
+    <!-- Main JS-->
+    <script src="{{ asset('assets/js/main.js')}}"></script>
 
 
 </body>

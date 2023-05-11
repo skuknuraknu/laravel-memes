@@ -27,6 +27,14 @@
             </a>
             <!-- anak dashboard -->
             <ul>
+              <li> <a href="{{ route('photo.index')}} ">
+                  <ion-icon name="ellipse-outline"></ion-icon>Upload meme(photo)
+                </a>
+              </li>
+              <li> <a href="{{ route('meme_kamu.index')}} ">
+                  <ion-icon name="ellipse-outline"></ion-icon>Meme kamu
+                </a>
+              </li>
                 <li> <a href="{{ route('photo.index') }} ">
                         <ion-icon name="ellipse-outline"></ion-icon>Upload meme(photo)
                     </a>

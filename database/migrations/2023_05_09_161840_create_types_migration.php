@@ -6,20 +6,26 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::create('photo', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->id();
-            $table->integer("id_user");
-            $table->string("nama_photo");
-            $table->string("path_photo");
-            $table->text("desc_photo");
-            $table->text("tags_photo");
+            $table->string('nama');
+            $table->string('email');
+            $table->enum('role', ['admin', 'guest']);
             $table->timestamps();
         });
+        
     }
+
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
-        Schema::dropIfExists('photo');
+        Schema::dropIfExists('types');
     }
 };
