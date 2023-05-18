@@ -2,6 +2,7 @@
     <title>Meme-Ku | Auth</title>
 </head>
 @include("auth.css")
+
 <h2>LOGIN KE APLIKASI MEME</h2>
 @if ($errors)
     <h5 class="bg-danger px-4 py-1 text-white rounded mb-2 {{ $errors->all() ? 'visible' : 'invisible' }}">{{ $errors->first() }}</h5>

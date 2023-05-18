@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Photo;
 use App\Models\Comment;
 
+
 class FeedController extends Controller
 {
     public function index(){
@@ -13,7 +14,7 @@ class FeedController extends Controller
         // 1 => private
         $memes = Photo::with("comments")
         ->join('users', 'users.id', '=', 'photo.id_user')
-        ->select("users.id as id_admin", "photo.*",)->
+        ->select("users.id as id_admin", "users.name", "photo.*",)->
         where(function ($query) {
             $query->where('photo.is_private', '=', 0);
         })->get();

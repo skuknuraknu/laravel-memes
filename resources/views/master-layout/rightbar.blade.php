@@ -6,7 +6,7 @@
                                 <i class="material-symbols-outlined mat-icon"> tune </i>
                             </button>
                         </div>
-                        <div class="cus-scrollbar contact-sidebar">
+                        <div class="cus-scrollbar contact-sidebar active">
                             <div class="sidebar-wrapper d-flex al-item justify-content-end justify-content-xl-center flex-column flex-md-row flex-xl-column flex gap-6">
                                 <div class="d-block d-lg-none position-absolute end-0 top-0">
                                     <button class="button contact-close">

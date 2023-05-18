@@ -2,19 +2,20 @@
     {{-- story --}}
     <div class="story-carousel">
         <div class="single-item">
-                            <div class="single-slide">
-                                <a href="#" class="position-relative d-center">
-                                    <img class="bg-img" src="{{  asset('assets/images/story-slider-owner.png')}}" alt="icon">
-                                    <div class="abs-area d-grid p-3 position-absolute bottom-0">
-                                        <div class="icon-box m-auto d-center mb-3">
-                                            <i class="material-symbols-outlined text-center mat-icon"> add </i>
-                                        </div>
-                                        <span class="mdtxt">Add Story</span>
-                                    </div>
-                                </a>
-                            </div>
+            <div class="single-slide">
+                <a href="#" class="position-relative d-center">
+                <img class="bg-img" src="{{  asset('assets/images/story-slider-owner.png')}}" alt="icon">
+                <div class="abs-area d-grid p-3 position-absolute bottom-0">
+                    <div class="icon-box m-auto d-center mb-3">
+                        <i class="material-symbols-outlined text-center mat-icon"> add </i>
+                    </div>
+                    <span class="mdtxt">Add Story</span>
+                </div>
+                </a>
+            </div>
         </div>
     </div>
+    {{-- upload --}}
     <div class="share-post d-flex gap-3 gap-sm-5 p-3 p-sm-5">
         <div class="profile-box">
             <a href="#"><img src="{{  asset('assets/images/add-post-avatar.png')}}" class="max-un" alt="icon"></a>

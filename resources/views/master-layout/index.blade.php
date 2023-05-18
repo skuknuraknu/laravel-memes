@@ -31,7 +31,7 @@
         <div class="container-fluid">
             <div class="row justify-content-between">
                 @include("master-layout.sidebar")
-                @include("master-layout.content")
+                @yield("post")
                 @include("master-layout.rightbar")
             </div>
         </div>
@@ -216,6 +216,7 @@
     <script src="{{ asset('assets/js/plugins/wow.min.js')}}"></script>
     <script src="{{ asset('assets/js/plugins/plugin.js')}}"></script>
     <script src="{{ asset('assets/js/main.js')}}"></script>
+    @stack('scripts')
 </body>
 
 

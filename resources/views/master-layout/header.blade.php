@@ -58,6 +58,12 @@
                                         </a>
                                     </li> --}}
                                     <li>
+                                        <a href="/about" class="mdtxt">
+                                            <i class="material-symbols-outlined mat-icon"> info </i>
+                                            Tentang kami
+                                        </a>
+                                    </li>
+                                    <li>
                                         <form action="/logout" method="post">
                                             @csrf
                                             <button type="submit" style="border:none">

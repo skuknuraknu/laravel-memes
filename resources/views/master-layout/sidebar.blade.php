@@ -24,14 +24,25 @@
                             <li>
                                 <a href="/" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> home </i>
-                                    <span>Home</span>
+                                    <span style="font-size: 16px;">Home</span>
                                 </a>
                             </li>
-                           
                             <li>
                                 <a href="{{ route("photo.index") }}" class="d-flex gap-4">
                                     <i class="material-symbols-outlined mat-icon"> Movie </i>
-                                    <span>Meme kamu</span>
+                                    <span style="font-size: 16px;">Meme kamu</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route("users.index") }}" class="d-flex gap-4">
+                                    <i class="material-symbols-outlined mat-icon"> Group </i>
+                                    <span style="font-size: 16px;">Pengguna</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route("market.index") }}" class="d-flex gap-4">
+                                    <i class="material-symbols-outlined mat-icon"> storefront </i>
+                                    <span style="font-size: 16px;">Marketplace</span>
                                 </a>
                             </li>
                         </ul>

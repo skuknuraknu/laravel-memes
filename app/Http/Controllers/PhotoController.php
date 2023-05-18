@@ -9,10 +9,6 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
-/*
-    ✅ Boleh dilanjutin di controller photo ini yaa....
-
-*/
 class PhotoController extends Controller
 {
     public function index(){
@@ -75,6 +71,7 @@ class PhotoController extends Controller
         $file = Photo::where(["id" => request()->id])->get();
         if(File::exists(public_path('uploads/'.$file[0]->path_photo))){
             Photo::where(["id" => request()->id])->delete();
+            Comment::where(["id_post" => request()->id])->delete();
             File::delete('uploads/'.$file[0]->path_photo);
             return redirect()->route("photo.index")->with("message", "Berhasil hapus");
         } else {

@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Comment;
 
-class Photo extends Model
-{
+class Photo extends Model {
     use HasFactory;
     protected $table = "photo";
     // referensi : https://id-laravel.com/post/mengenal-eloquent-variable-spesial/
